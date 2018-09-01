@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.tsou.hxgpopupwindow.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="@string/app_name" />
+
+    <Button
+        android:id="@+id/btn_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="位置" />
+
+</LinearLayout>
