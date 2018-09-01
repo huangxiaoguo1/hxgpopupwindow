@@ -26,6 +26,21 @@ HxgPopupUtils.getInstance()
                 .showAsDropDown(mTvAddress)
 
 ```
+```
+        View popupView = HxgPopupUtils.getInstance()
+                .setContentView(this, R.layout.popup_item)
+                .setLayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, -2)
+                .setFocusable(true)
+                .dismissPopWindow(R.id.view)
+//                .showAsDropDown(mTvAddress)
+                .setBackgroundDrawable()
+                .showAtLocation(mTvAddress, Gravity.TOP, 100, 300)
+                .setAnimation(as)
+                .getView();
+        ((TextView) popupView.findViewById(R.id.textview))
+                .setText("我是更改的PopupWindow");
+```
+
 ### 添加布局
 
 ```
