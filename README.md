@@ -11,7 +11,7 @@
     }
 
     dependencies {
-        implementation 'com.github.huangxiaoguo1:hxgpopupwindow:1.0.0'
+        implementation 'com.github.huangxiaoguo1:hxgpopupwindow:1.0.1'
     }
 ```
 
@@ -93,7 +93,12 @@ dismissPopWindow(int viewId)
 dismissPopWindow()
 
 ```
+### 消失监听
 
+```
+ setOnDismissListener(OnDismissListener listener) 
+
+```
 
 
 
