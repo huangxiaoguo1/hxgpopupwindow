@@ -85,6 +85,12 @@ public class HxgPopupUtils {
         return this;
     }
 
+    //  监听popWindow消失
+    public HxgPopupUtils setOnDismissListener(PopupWindow.OnDismissListener listener) {
+        popWindow.setOnDismissListener(listener);
+        return this;
+    }
+
     //获得布局view
     public View getView() {
         return view;

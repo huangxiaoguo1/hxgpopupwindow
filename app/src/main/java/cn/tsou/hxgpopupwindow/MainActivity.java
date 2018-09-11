@@ -10,7 +10,9 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.ScaleAnimation;
 import android.widget.Button;
+import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import cn.tsou.hxgpopup.HxgPopupUtils;
 import tsou.cn.lib_hxgioc.HxgBind;
@@ -52,6 +54,12 @@ public class MainActivity extends AppCompatActivity {
                 .setFocusable(true)
                 .dismissPopWindow(R.id.view)
 //                .showAsDropDown(mTvAddress)
+                .setOnDismissListener(new PopupWindow.OnDismissListener() {
+                    @Override
+                    public void onDismiss() {
+                        Toast.makeText(MainActivity.this, "消失了", Toast.LENGTH_LONG).show();
+                    }
+                })
                 .setBackgroundDrawable()
                 .showAtLocation(mTvAddress, Gravity.TOP, 100, 300)
                 .setAnimation(as)
