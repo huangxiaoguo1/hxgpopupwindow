@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/HxgPopupWindow.iml" filepath="$PROJECT_DIR$/HxgPopupWindow.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/hxgpopup/hxgpopup.iml" filepath="$PROJECT_DIR$/hxgpopup/hxgpopup.iml" />
       <module fileurl="file://$PROJECT_DIR$/hxgpopup/hxgpopup.iml" filepath="$PROJECT_DIR$/hxgpopup/hxgpopup.iml" />
       <module fileurl="file://$PROJECT_DIR$/hxgpopupwindow.iml" filepath="$PROJECT_DIR$/hxgpopupwindow.iml" />
     </modules>

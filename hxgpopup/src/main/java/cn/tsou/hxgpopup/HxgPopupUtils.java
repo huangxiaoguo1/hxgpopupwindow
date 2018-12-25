@@ -61,33 +61,38 @@ public class HxgPopupUtils {
 
     //  设置显示位置
     public HxgPopupUtils showAsDropDown(View view) {
-        popWindow.showAsDropDown(view);
+        if (view != null)
+            popWindow.showAsDropDown(view);
         return this;
     }
 
     //  设置显示位置
     public HxgPopupUtils showAtLocation(View view, int gravity, int x, int y) {
-        popWindow.showAtLocation(view, gravity, x, y);
+        if (view != null)
+            popWindow.showAtLocation(view, gravity, x, y);
         return this;
     }
 
     //  添加动画 效果
     public HxgPopupUtils setAnimation(Animation animation) {
         // 只有view 才有执行动画的功能,
-        view.startAnimation(animation);
+        if (animation != null)
+            view.startAnimation(animation);
         return this;
     }
 
     //  添加动画 效果
     public HxgPopupUtils setAnimation(AnimationSet animation) {
         // 只有view 才有执行动画的功能,
-        view.startAnimation(animation);
+        if (animation != null)
+            view.startAnimation(animation);
         return this;
     }
 
     //  监听popWindow消失
     public HxgPopupUtils setOnDismissListener(PopupWindow.OnDismissListener listener) {
-        popWindow.setOnDismissListener(listener);
+        if (listener != null)
+            popWindow.setOnDismissListener(listener);
         return this;
     }
 
