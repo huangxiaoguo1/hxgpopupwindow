@@ -11,7 +11,7 @@
     }
 
     dependencies {
-        implementation 'com.github.huangxiaoguo1:hxgpopupwindow:1.0.1'
+        implementation 'com.github.huangxiaoguo1:hxgpopupwindow:1.0.2'
     }
 ```
 
