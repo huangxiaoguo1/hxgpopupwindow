@@ -9,8 +9,6 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.widget.PopupWindow;
 
-import cn.tsou.hxgpopup.view.HPopupWindow;
-
 /**
  * Created by 黄家三少 on 2018/9/2.
  * PopupWindow
@@ -43,7 +41,7 @@ public class HxgPopupUtils {
 
     //设置宽高
     public HxgPopupUtils setLayoutParams(int width, int height) {
-        popWindow = new HPopupWindow(view, width, height);
+        popWindow = new PopupWindow(view, width, height);
         return this;
     }
 
@@ -120,5 +118,9 @@ public class HxgPopupUtils {
             popWindow.dismiss();
             popWindow = null;
         }
+    }
+
+    public PopupWindow getPopWindow() {
+        return popWindow;
     }
 }

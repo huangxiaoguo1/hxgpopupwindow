@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     private void btnAddressClick(Button view) {
         View popupView = HxgPopupUtils.getInstance()
                 .setContentView(this, R.layout.popup_item)
-                .setLayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, -1)
+                .setLayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, -2)
                 .setFocusable(true)
                 .dismissPopWindow(R.id.view)
                 .showAsDropDown(mSpace)
@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
 //                .showAtLocation(mTvAddress, Gravity.TOP, 100, 300)
                 .setAnimation(as)
                 .getView();
+        HxgPopupUtils.getInstance().getPopWindow().update(ViewGroup.LayoutParams.MATCH_PARENT, this.getResources().getDisplayMetrics().heightPixels - mSpace.getBottom());
         ((TextView) popupView.findViewById(R.id.textview))
                 .setText("我是更改的PopupWindow");
     }
