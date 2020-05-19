@@ -2,7 +2,6 @@ package cn.tsou.hxgpopupwindow;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
@@ -11,6 +10,7 @@ import android.view.animation.AnimationSet;
 import android.view.animation.ScaleAnimation;
 import android.widget.Button;
 import android.widget.PopupWindow;
+import android.widget.Space;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
      **/
     @HxgBind(R.id.tv_address)
     private TextView mTvAddress;
+    @HxgBind(R.id.space)
+    private Space mSpace;
     private AnimationSet as;
 
     @Override
@@ -50,10 +52,10 @@ public class MainActivity extends AppCompatActivity {
     private void btnAddressClick(Button view) {
         View popupView = HxgPopupUtils.getInstance()
                 .setContentView(this, R.layout.popup_item)
-                .setLayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, -2)
+                .setLayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, -1)
                 .setFocusable(true)
                 .dismissPopWindow(R.id.view)
-//                .showAsDropDown(mTvAddress)
+                .showAsDropDown(mSpace)
                 .setOnDismissListener(new PopupWindow.OnDismissListener() {
                     @Override
                     public void onDismiss() {
@@ -61,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 })
                 .setBackgroundDrawable()
-                .showAtLocation(mTvAddress, Gravity.TOP, 100, 300)
+//                .showAtLocation(mTvAddress, Gravity.TOP, 100, 300)
                 .setAnimation(as)
                 .getView();
         ((TextView) popupView.findViewById(R.id.textview))
