@@ -65,8 +65,9 @@ public class MainActivity extends AppCompatActivity {
                 .setBackgroundDrawable()
 //                .showAtLocation(mTvAddress, Gravity.TOP, 100, 300)
                 .setAnimation(as)
+                .update(ViewGroup.LayoutParams.MATCH_PARENT, this.getResources().getDisplayMetrics().heightPixels - mSpace.getBottom())
                 .getView();
-        HxgPopupUtils.getInstance().getPopWindow().update(ViewGroup.LayoutParams.MATCH_PARENT, this.getResources().getDisplayMetrics().heightPixels - mSpace.getBottom());
+//        HxgPopupUtils.getInstance().getPopWindow().update(ViewGroup.LayoutParams.MATCH_PARENT, this.getResources().getDisplayMetrics().heightPixels - mSpace.getBottom());
         ((TextView) popupView.findViewById(R.id.textview))
                 .setText("我是更改的PopupWindow");
     }

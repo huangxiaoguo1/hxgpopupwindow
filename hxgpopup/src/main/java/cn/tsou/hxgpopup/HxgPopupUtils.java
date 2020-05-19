@@ -45,6 +45,7 @@ public class HxgPopupUtils {
         return this;
     }
 
+
     //  如果要执行动画，popWindow 必须得有背景
     public HxgPopupUtils setBackgroundDrawable() {
         // 添加一个完全透明的背景
@@ -63,6 +64,11 @@ public class HxgPopupUtils {
     public HxgPopupUtils showAsDropDown(View view) {
         if (view != null)
             popWindow.showAsDropDown(view);
+        return this;
+    }
+
+    public HxgPopupUtils update(int width, int height) {
+        popWindow.update(width, height);
         return this;
     }
 
